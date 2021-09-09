@@ -2,8 +2,8 @@
 import discord
 from discord.ext import commands
 
-# Credentials
-TOKEN = 'ODgzMjY0OTkxNTczMTg0NTY1.YTHaoA.m1BpOcJCyA6CWTL5d25NX9oXr60'
+# CredentialsCredentials
+TOKEN = 'ODgzMjY0OTkxNTczMTg0NTY1.YTHaoA.mHR-ldp3pvEizA8UXZJ3JXKViiI'
 
 # Create bot
 client = commands.Bot(command_prefix='!')
@@ -18,5 +18,5 @@ async def on_ready():
 @client.command()
 async def helloworld(ctx):
     await ctx.send('Hello World!')
-
+print(TOKEN)
 client.run(TOKEN)
