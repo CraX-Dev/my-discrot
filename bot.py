@@ -1,18 +1,22 @@
+# Imports
 import discord
-import os
+from discord.ext import commands
 
-client = discord.Client()
+# Credentials
+TOKEN = ''
 
+# Create bot
+client = commands.Bot(command_prefix='!')
+
+# Startup Information
 @client.event
 async def on_ready():
-    print('We have logged in as {0.user}'.format(client))
+    print('Connected to bot: {}'.format(client.user.name))
+    print('Bot ID: {}'.format(client.user.id))
 
-@client.event
-async def on_message(message):
-    if message.author == client.user:
-        return
+# Command
+@client.command()
+async def helloworld(ctx):
+    await ctx.send('Hello World!')
 
-    if message.content.startswith('$hello'):
-        await message.channel.send('Hello!')
-
-client.run(os.getenv('TOKEN'))
+client.run(TOKEN)
