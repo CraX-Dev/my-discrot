@@ -3,7 +3,7 @@ import discord
 from discord.ext import commands
 
 # Credentials
-TOKEN = ''
+TOKEN = 'ODgzMjY0OTkxNTczMTg0NTY1.YTHaoA.m1BpOcJCyA6CWTL5d25NX9oXr60'
 
 # Create bot
 client = commands.Bot(command_prefix='!')
